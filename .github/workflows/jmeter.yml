@@ -16,10 +16,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: cd demo-app
       - run: npm install
-      - run: npm test
-      - run: cd ..
+        working-directory: demo-app
+      - run: npm dev
+        working-directory: demo-app
+
 
       - name: Run JMeter Action
         uses: rbhadti94/apache-jmeter-action@v0.5.0
