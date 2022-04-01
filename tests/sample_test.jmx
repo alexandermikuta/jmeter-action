@@ -36,7 +36,7 @@
                     <stringProp name="HTTPSampler.method">GET</stringProp>
                     <stringProp name="HTTPSampler.path" />
                     <stringProp name="HTTPSampler.port">3000</stringProp>
-                    <stringProp name="HTTPSampler.protocol" />
+                    <stringProp name="HTTPSampler.protocol" >http://</stringProp>
                     <stringProp name="HTTPSampler.response_timeout" />
                     <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
                     <elementProp guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true" elementType="Arguments" name="HTTPsampler.Arguments">
