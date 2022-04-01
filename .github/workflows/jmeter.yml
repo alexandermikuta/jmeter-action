@@ -11,12 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        
+
       - name: Install and Build
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
         run: |
-          cd demo-app
+          cd demo-apoo
           npm install
-          npm run dev
+          npm test
           cd ..
 
       - name: Run JMeter Action
