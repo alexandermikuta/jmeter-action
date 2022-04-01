@@ -11,14 +11,14 @@ jobs:
   action_build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
+        
       - name: Install and Build
         run: |
           cd demo-app
           npm install
           npm run dev
+          cd ..
 
       - name: Run JMeter Action
         uses: rbhadti94/apache-jmeter-action@v0.5.0
@@ -26,7 +26,7 @@ jobs:
           testFilePath: tests/sample_test.jmx
           outputReportsFolder: reports/
           args: "--loglevel INFO"
-        
+
       - name: upload jmeter artifacts
         uses: actions/upload-artifact@v1
         with:
