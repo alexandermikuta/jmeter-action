@@ -14,10 +14,10 @@
                 <stringProp name="ThreadGroup.delay" />
                 <stringProp name="ThreadGroup.duration" />
                 <elementProp guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true" elementType="LoopController" name="ThreadGroup.main_controller">
-                    <boolProp name="LoopController.continue_forever">true</boolProp>
-                    <stringProp name="LoopController.loops">10</stringProp>
+                    <boolProp name="LoopController.continue_forever">false</boolProp>
+                    <stringProp name="LoopController.loops">5</stringProp>
                 </elementProp>
-                <stringProp name="ThreadGroup.num_threads">10</stringProp>
+                <stringProp name="ThreadGroup.num_threads">5</stringProp>
                 <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
                 <stringProp name="ThreadGroup.ramp_time">1</stringProp>
                 <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -29,7 +29,7 @@
                     <stringProp name="HTTPSampler.concurrentPool" />
                     <stringProp name="HTTPSampler.connect_timeout" />
                     <stringProp name="HTTPSampler.contentEncoding" />
-                    <stringProp name="HTTPSampler.domain">localhost</stringProp>
+                    <stringProp name="HTTPSampler.domain">google.de</stringProp>
                     <stringProp name="HTTPSampler.embedded_url_re" />
                     <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
                     <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
