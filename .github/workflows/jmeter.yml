@@ -1,0 +1,34 @@
+name: Test JMeter Action
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: [master]
+
+jobs:
+  action_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+      - uses: actions/checkout@v2
+
+      - name: Install and Build
+        run: |
+          cd demo-app
+          npm install
+          npm run dev
+
+      - name: Run JMeter Action on a test
+        uses: rbhadti94/apache-jmeter-action@v0.5.0
+        with:
+          testFilePath: tests/sample_test.jmx
+          outputReportsFolder: reports/
+          args: "--loglevel INFO"
+        
+      - name: upload jmeter artifacts
+      - uses: actions/upload-artifact@v1
+        with:
+          name: jmeter-test-results
+          path: reports/
