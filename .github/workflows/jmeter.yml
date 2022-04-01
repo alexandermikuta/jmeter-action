@@ -20,12 +20,12 @@ jobs:
       #     npm run dev
       #     cd ..
 
-      - name: Run JMeter Action
-        uses: rbhadti94/apache-jmeter-action@v0.5.0
-        with:
-          testFilePath: tests/sample_test.jmx
-          outputReportsFolder: reports/
-          args: "--loglevel INFO"
+      # - name: Run JMeter Action
+      #   uses: rbhadti94/apache-jmeter-action@v0.5.0
+      #   with:
+      #     testFilePath: tests/sample_test.jmx
+      #     outputReportsFolder: reports/
+      #     args: "--loglevel INFO"
 
       - name: upload jmeter artifacts
         uses: actions/upload-artifact@v1
