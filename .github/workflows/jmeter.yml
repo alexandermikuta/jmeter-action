@@ -13,12 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: Install and Build
-        run: |
-          cd demo-app
-          npm install
-          npm run dev
-          cd ..
+      # - name: Install and Build
+      #   run: |
+      #     cd demo-app
+      #     npm install
+      #     npm run dev
+      #     cd ..
 
       - name: Run JMeter Action
         uses: rbhadti94/apache-jmeter-action@v0.5.0
