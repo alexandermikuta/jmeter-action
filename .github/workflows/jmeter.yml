@@ -27,8 +27,8 @@ jobs:
       #     outputReportsFolder: reports/
       #     args: "--loglevel INFO"
 
-      - name: upload jmeter artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: jmeter-test-results
-          path: reports/
+      # - name: upload jmeter artifacts
+      #   uses: actions/upload-artifact@v1
+      #   with:
+      #     name: jmeter-test-results
+      #     path: reports/
