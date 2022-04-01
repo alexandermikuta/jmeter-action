@@ -11,7 +11,8 @@ jobs:
   action_build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v2
 
       - name: Install and Build
         run: |
@@ -27,7 +28,7 @@ jobs:
           args: "--loglevel INFO"
         
       - name: upload jmeter artifacts
-      - uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v1
         with:
           name: jmeter-test-results
           path: reports/
