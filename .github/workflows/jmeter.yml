@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm ci --progress=false --silent
+      - run: npm ci
         working-directory: demo-app
       - run: npm run dev & npx wait-on http://localhost:3000
         working-directory: demo-app
